@@ -1,7 +1,7 @@
 package app
 
 import (
-	"auth/internal/config"
+	"auth/internal/configs"
 	"auth/internal/logs"
 	"context"
 	"net/http"
@@ -17,7 +17,7 @@ type App struct {
 	Server  http.Server
 	Context context.Context
 	Cancel  context.CancelCauseFunc
-	Config  *config.Config
+	Config  *configs.Config
 	Router  *gin.Engine
 	Logger  *logs.Logger
 }
@@ -26,7 +26,7 @@ func NewApp() *App {
 	return &App{
 		Router: gin.New(),
 		Logger: logs.New(os.Stdout, logs.DEBUG),
-		Config: config.Load(),
+		Config: configs.Load(),
 	}
 }
 

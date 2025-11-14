@@ -3,12 +3,12 @@ all: build
 # for unix
 build:
 	@echo "Building..."
-	sudo ./bin/build.sh
+	sudo ./scripts/build.sh
 	@echo "Building end"
 
 build-win:
 	@echo "Building..."
-	sudo ./bin/win/build-win.sh
+	sudo ./scripts/win/build-win.sh
 
 run:
 	@echo "Start container..."

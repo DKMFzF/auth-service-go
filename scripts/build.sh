@@ -2,5 +2,5 @@
 
 source "./bin/utils/isFolder.sh"
 
-go build -o ./build/main cmd/video-chat/main.go
+go build -o ./build/main cmd/auth/main.go
 
