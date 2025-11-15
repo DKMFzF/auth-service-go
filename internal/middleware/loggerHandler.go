@@ -1,17 +1,18 @@
 package middleware
 
 import (
-	"auth/internal/logs"
+	//"auth/internal/logs"
+	"fmt"
 	"strconv"
 
 	gin "github.com/gin-gonic/gin"
 )
 
-func LoggerHandler(log *logs.Logger) gin.HandlerFunc {
+func LoggerHandler() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		c.Next()
 
-		log.Info(
+		fmt.Printf(
 			"%s", "Request "+
 				c.Request.RequestURI+
 				" Response Code "+strconv.Itoa(c.Writer.Status()),

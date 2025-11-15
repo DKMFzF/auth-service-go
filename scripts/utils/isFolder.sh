@@ -3,7 +3,7 @@ set -e
 
 if [ -d "./build" ]; then
     echo "Folder: OK"
-	
+
 	if [ -d "./main" ]; then
 		echo "old_build file"
 	else

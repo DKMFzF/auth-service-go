@@ -76,4 +76,9 @@ watch:
             fi; \
         fi
 
+check-etcd-keys:
+	@echo "Check etcd keys..."
+	# TODO: check in docs https://etcd.io/
+	@etcd keys ....
+
 .PHONY: all build run test clean watch docker-compose-run docker-compose-down itest clean-logs docker-build docker-run

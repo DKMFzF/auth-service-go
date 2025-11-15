@@ -2,7 +2,5 @@
 src = "app.env.tmpl"         
 dest = ".env"  
 keys = [                     
-  "/app/config/port",
-  "/app/config/db_user",
-  "/app/config/db_pass",
+  # TODO: wr keys for etcd...
 ]
